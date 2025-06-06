@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+<div class="container">
+  <h2>Contact us</h2>
+  <form action="../">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="first-name">First Name *</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name *</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+      <div class="form-group">
+        <label for="email-address">Email Address *</label>
+        <input type="email" id="email-address" name="email-address" required>
+      </div>
+      <div class="form-group" style="grid-column: 1 / -1;">
+        <span class="query-type-label">Query Type *</span>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="general" name="query-type" required>
+        <label for="general">General Enquiry</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="support" name="query-type" required>
+        <label for="support">Support Request</label>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="consent" required>
+        <label for="consent">I consent to being contacted by the team *</label>
+      </div>
+    </div>
+    <div class="button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+<div id="toast" role="status" aria-live="polite" style="display:none;" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

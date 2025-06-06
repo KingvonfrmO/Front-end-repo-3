@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Karla";
+    src: url("./assets/fonts/Karla-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400 700;
+}
+@font-face {
+    font-family: "Karla";
+    src: url("./assets/fonts/Karla-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400 700;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Karla, serif;
+    min-height: 100vh;
+    background-color: hsl(189, 45%, 94%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.container h2 {
+    font-family: Karla, sans-serif;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group:nth-child(5),
+.form-group:nth-child(6) {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group:nth-child(3),
+.form-group:nth-child(7),
+.form-group:last-child {
+    grid-column: 1 / -1;
+}
+
+.form-group:last-child {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group label {
+    font-family: Karla, sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 10px 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 15px 30px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: hsl(169, 82%, 27%);
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(148, 38%, 91%);
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 2px solid hsl(169, 82%, 27%);
+    outline-offset: 2px;
+}
+
+input[type="radio"]:hover,
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+button {
+    color: white;
+    background-color: hsl(169, 82%, 27%);
+    margin-top: 30px;
+    padding: 15px 30px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover,
+button:focus {
+    background-color: hsl(169, 82%, 22%);
+    box-shadow: 0 0 0 3px hsl(148, 38%, 91%);
+    outline: none;
+    cursor: pointer;
+}
+
+.toast {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: hsl(169, 82%, 27%);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    outline: none;
+}
+
+
+
+@media (max-width: 400px) {
+    .container {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
