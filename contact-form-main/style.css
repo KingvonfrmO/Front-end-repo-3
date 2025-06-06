@@ -84,6 +84,14 @@ textarea {
     border: 1px solid #ccc;
 }
 
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:focus {
+    border-color: hsl(169, 82%, 27%);
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(148, 38%, 91%);
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
@@ -137,6 +145,11 @@ button:focus {
     outline: none;
 }
 
+.error {
+    color: hsl(0, 66%, 54%);
+    font-size: 0.95em;
+    margin-top: 4px;
+}
 
 
 @media (max-width: 400px) {
