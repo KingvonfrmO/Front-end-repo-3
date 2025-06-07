@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
             display_toast('Message sent! We will get back to you soon.');
         }
     });
-
     form.querySelectorAll('input, textarea').forEach(input => {
         input.addEventListener('input', () => clearError(input));
         input.addEventListener('change', () => clearError(input));
